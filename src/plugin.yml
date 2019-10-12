@@ -1,0 +1,7 @@
+name: BlockTimer
+main: ru.stuvanya.blocktimer.Main
+description: BlockTimer
+version: 1.0
+api-version: 1.13
+authors:
+  - stuvanya

@@ -1,0 +1,7 @@
+place:
+  CRAFTING_TABLE: 100
+  STONE: 50
+break:
+  DIRT: 10
+worlds:
+  - 'world'
