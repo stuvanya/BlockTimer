@@ -68,7 +68,8 @@ public class Main extends JavaPlugin implements Listener {
 	public void onBreak(BlockBreakEvent e) {
 		Block block = e.getBlock();
 		if (worlds.contains(block.getWorld())) {
-			Material material = e.getBlock().getType();
+			Material material = block.getType();
+			BlockState bs = block.getState();
 			
 			if (breakBlocksDurations.containsKey(material)) {
 				Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
@@ -76,6 +77,7 @@ public class Main extends JavaPlugin implements Listener {
 					@Override
 					public void run() {
 						block.setType(material);
+						block.setBlockData(bs.getBlockData());
 					}
 					
 				}, breakBlocksDurations.get(material));
